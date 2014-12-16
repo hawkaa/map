@@ -27,3 +27,17 @@ body {
   color: #000;
   padding: 0.2em 0;
 }
+
+
+/*
+ * OL 3
+ */
+
+.map {
+  height: 400px;
+}
+
+.slider {
+  margin-left: 30px;
+  width: 400px;
+} 

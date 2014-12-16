@@ -4,6 +4,7 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "modernizr": "~2.8.1",
-    "ol3": "*"
+    "ol3": "*",
+    "nouislider": "~7.0.9"
   }
 }

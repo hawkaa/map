@@ -9,6 +9,9 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/ol3/css/ol.css" />
+    <link rel="stylesheet" href="../bower_components/nouislider/distribute/jquery.nouislider.min.css" />
+    <link rel="stylesheet" href="../bower_components/nouislider/distribute/jquery.nouislider.pips.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -18,21 +21,22 @@
 
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
+    <script src="../bower_components/ol3/build/ol.js"></script>
     <!-- endbuild -->
+
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    
+    <div id="map" class="map"></div>
+    <h3>Magnitude</h3>
+    <div class='slider' id='slider-magnitude'></div>
+    <br />
+    <input id='slider-magnitude-from' style="margin-left:20px; width: 50px" type="text">
+    <input id='slider-magnitude-to' style="margin-left:300px; width: 50px" type="text">
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Modernizr</li>
-      </ul>
-    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -47,6 +51,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/nouislider/distribute/jquery.nouislider.all.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
