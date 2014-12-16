@@ -1,5 +1,6 @@
-/* jshint devel:true */
-
+(function() {
+  'use strict';
+})();
 var minMagnitude = 5.0;
 var maxMagnitude = 6.0;
 
@@ -9,24 +10,10 @@ var earthquakesSource = new ol.source.KML({
   url: 'earthquakes.kml'
 });
 
-/*
-var heatmap = new ol.layer.Heatmap({
-  source: earthquakesSource,
-
-  style: function(feature, resolution) {
-    return null;
-  }
-});
-
-
-earthquakesSource.on('addfeature', function(e) {
-
-});
-*/
-
 var earthquakes = new ol.layer.Vector({
   source: earthquakesSource,
   style: function(feature, resolution) {
+    'use strict';
     var name = feature.get('name');
     var magnitude = parseFloat(name.substr(2));
     var style = new ol.style.Style({
@@ -49,7 +36,6 @@ var map = new ol.Map({
       source: new ol.source.OSM()
     }),
     earthquakes,
- //   heatmap
   ],
   target: 'map',
   controls: ol.control.defaults(),
@@ -59,7 +45,6 @@ var map = new ol.Map({
   })
 
 });
-
 $('.slider').noUiSlider({
   start: [minMagnitude, maxMagnitude],
   connect: true,
